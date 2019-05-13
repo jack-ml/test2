@@ -1,0 +1,42 @@
+以下为在MySQL数据库中查询数据通用的 SELECT 语法： 
+SELECT column_name,column_name
+FROM table_name
+[WHERE Clause]
+[LIMIT N][ OFFSET M]
+以下是 SQL SELECT 语句使用 WHERE 子句从数据表中读取数据的通用语法：
+SELECT field1, field2,...fieldN FROM table_name1, table_name2...
+[WHERE condition1 [AND [OR]] condition2.....
+以下是 UPDATE 命令修改 MySQL 数据表数据的通用 SQL 语法：
+UPDATE table_name SET field1=new-value1, field2=new-value2
+[WHERE Clause]
+以下是 SQL DELETE 语句从 MySQL 数据表中删除数据的通用语法：
+DELETE FROM table_name [WHERE Clause]
+以下是 SQL SELECT 语句使用 LIKE 子句从数据表中读取数据的通用语法：
+SELECT field1, field2,...fieldN 
+FROM table_name
+WHERE field1 LIKE condition1 [AND [OR]] filed2 = 'somevalue'
+MySQL UNION 操作符语法格式：
+SELECT expression1, expression2, ... expression_n
+FROM tables
+[WHERE conditions]
+UNION [ALL | DISTINCT]
+SELECT expression1, expression2, ... expression_n
+FROM tables
+[WHERE conditions];
+项目一 -- 创建表
+CREATE TABLE email (
+ID INT NOT NULL PRIMARY KEY,
+Email VARCHAR(255)
+);
+-- 插入数据
+INSERT INTO World
+  VALUES('Afghanistan','Asia',652230,25500100,20343000);
+INSERT INTO World 
+  VALUES('Albania','Europe',28748,2831741,12960000);
+INSERT INTO World 
+  VALUES('Algeria','Africa',2381741,37100000,188681000);
+INSERT INTO World
+  VALUES('Andorra','Europe',468,78115,3712000);
+INSERT INTO World
+  VALUES('Angola','Africa',1246700,20609294,100990000);
+  
