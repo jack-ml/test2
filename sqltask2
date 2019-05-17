@@ -1,0 +1,14 @@
+超过5名学生的课
+建表语句：CREATE TABLE courses ( id int(11) AUTO_INCREMENT PRIMARY KEY ,student VARCHAR((11) NOT NULL , class VARCHAR(11) NOT NULL )
+查询条件： 编写一个 SQL 查询，列出所有超过或等于5名学生的课。
+语句如下： SELECT DISTINCT * FROM 'courses' GROUP BY class HAVING COUNT(student)>5
+注：
+distinct为去重命令
+GROUP BY语句用来与聚合函数(aggregate functions such as COUNT, SUM, AVG, MIN, or MAX.)联合使用来得到一个或多个列的结果集。
+HAVING语句通常与GROUP BY语句联合使用，用来过滤由GROUP BY语句返回的记录集。
+count 为聚合函数
+交换工资
+执行语句如下： UPDATE salary SET sex=IF(sex='f','m','f'); 注：
+if语法介绍：
+IF(expr1,expr2,expr3) 如果 expr1 是TRUE (expr1 <> 0 and expr1 <> NULL)，则 IF()的返回值为expr2; 否则返回值则为 expr3。IF() 的返回值为数字值或字符串值，具体情况视其所在语境而定。 结果如下： 
+组合两张表
